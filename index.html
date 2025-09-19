@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Cart System</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('categories')">Categories</a>
+    <a href="#" onclick="showPage('cart')">Cart</a>
+    <a href="#" onclick="showPage('checkout')">Checkout</a>
+  </div>
+
+  <div id="home" class="container">
+    <h1>Welcome to 🛒 E-Commerce Store</h1>
+    <p>Browse categories, add products to your cart, and checkout easily!</p>
+  </div>
+
+  <div id="categories" class="container" style="display:none">
+    <h1>Product Categories</h1>
+    <ul>
+      <li><a href="#" onclick="renderProducts('Electronics')">Electronics</a></li>
+      <li><a href="#" onclick="renderProducts('Accessories')">Accessories</a></li>
+      <li><a href="#" onclick="renderProducts('Gadgets')">Gadgets</a></li>
+    </ul>
+    <div id="product-list"></div>
+  </div>
+
+  <div id="cart" class="container" style="display:none">
+    <h1>Your Cart</h1>
+    <div id="cart-items"></div>
+    <div id="cart-total"></div>
+  </div>
+
+  <div id="checkout" class="container" style="display:none">
+    <h1>Checkout</h1>
+    <div id="checkout-items"></div>
+    <div id="checkout-total"></div>
+    <button onclick="checkout()">Confirm Purchase</button>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
